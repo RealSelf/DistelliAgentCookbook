@@ -61,7 +61,7 @@ template "/etc/distelli.yml" do
 end
 
 execute "dagent" do
-  command "dagent start #{node[:fqdn]}"
+  command "dagent start #{node[:hostname]}"
   cwd "/home/#{node[:distelli][:agent][:user]}"
   user node[:distelli][:agent][:user]
   group node[:distelli][:agent][:group]
